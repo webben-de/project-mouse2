@@ -29,19 +29,16 @@
 						<nav class="nav-group" ng-controller="NavCtrl">
 							<h5 class="nav-group-title">Projects</h5>
 							<span class="nav-group-item" ng-repeat="(key1, value) in projects">
-								<span class="icon icon-cloud active"></span>
-								<a href="" ng-click="choose(value)">{{value.name}}</a>
+								<span class="icon icon-folder"></span>
+								<span ng-click="choose(value)">{{value.name}}</span>
 							</span>
 						</nav>
 					</div>
 					<div class="pane" ng-controller="ContentCtrl">
-						<ul class="list-group">
+						<ul class="list-group" ng-show="project">
 							<li class="list-group-header" >
 							<h1 ng-bind="project.node.name"></h1>
 							<p>Author: <strong ng-bind="project.node.author.name"></strong></p>
-							</li>
-							<li class="list-group-header">
-								<input class="form-control" type="text" placeholder="Search for something" ng-model="search">
 							</li>
 							<li class="list-group-header">
 								<h3>Node Stuff</h3>

@@ -15,15 +15,21 @@ app.controller('NavCtrl', ['$scope','$rootScope', function($scope,$rootScope){
 
 	$scope.projects = [];
 
+
 	let scanner = (path)=>{
-		fs.readdir(path[0],(err,arr)=>{
+		if (!config.path) {
+			config.path = path[0]
+			fs.writeFile('./public/db/config.json', JSON.stringify(config,null,4));
+		}
+		fs.readdir(config.path,(err,arr)=>{
 			arr.forEach((dirname)=>{
-				$scope.projects.push(new Project(path[0], dirname));
+				$scope.projects.push(new Project(config.path, dirname));
 				$scope.$apply();
 			})
 		})
 	}
 
+	if (config.path) {scanner(config.path)}
 	ipc.on('dirChange',scanner);
 }]);
 
