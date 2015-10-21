@@ -1,0 +1,479 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"con",
+				"console"
+			],
+			[
+				"Place",
+				"PlaceSchema"
+			],
+			[
+				"ng-in",
+				"ng-init	AngularJS"
+			],
+			[
+				"place",
+				"places"
+			],
+			[
+				"B",
+				"broken"
+			],
+			[
+				"articl",
+				"articleReduce"
+			],
+			[
+				"anu",
+				"angular-chart"
+			],
+			[
+				"ng-",
+				"ng-selected	AngularJS"
+			],
+			[
+				"ar",
+				"article"
+			],
+			[
+				"ng-ree",
+				"ng-repeat	AngularJS"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 394,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "index.js",
+			"settings":
+			{
+				"buffer_size": 911,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 400.0,
+		"last_filter": "pcin",
+		"selected_items":
+		[
+			[
+				"pcin",
+				"Package Control: Install Package"
+			],
+			[
+				"git status",
+				"Git: Status"
+			],
+			[
+				"gitdif",
+				"Git: Diff"
+			],
+			[
+				"git diff",
+				"Git: Diff Current File"
+			],
+			[
+				"git dif",
+				"Git: Diff"
+			],
+			[
+				"key",
+				"Preferences: Key Bindings - User"
+			],
+			[
+				"pushc",
+				"Git: Push Current Branch"
+			],
+			[
+				"git st",
+				"Git: Status"
+			],
+			[
+				"git push",
+				"Git: Push Current Branch"
+			],
+			[
+				"gitstat",
+				"Git: Status"
+			],
+			[
+				"git statu",
+				"Git: Status"
+			],
+			[
+				"csv",
+				"CSV: Format"
+			],
+			[
+				"html",
+				"HTMLBeautify"
+			],
+			[
+				"pcins",
+				"Package Control: Install Package"
+			],
+			[
+				"htm",
+				"HTMLBeautify"
+			],
+			[
+				"beau",
+				"Javascript Beautify"
+			],
+			[
+				"bea",
+				"HTMLBeautify"
+			],
+			[
+				"pic",
+				"Package Control: Install Package"
+			],
+			[
+				"user",
+				"Preferences: Settings - User"
+			]
+		],
+		"width": 480.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Users/Benjamin/Documents/Projects/project-mouse2",
+		"/C/Users/Benjamin/Documents/Projects/project-mouse2/bower_components",
+		"/C/Users/Benjamin/Documents/Projects/project-mouse2/bower_components/photon",
+		"/C/Users/Benjamin/Documents/Projects/project-mouse2/bower_components/photon/dist",
+		"/C/Users/Benjamin/Documents/Projects/project-mouse2/bower_components/photon/dist/css"
+	],
+	"file_history":
+	[
+		"/C/Users/Benjamin/Documents/Projects/dowafo/package.json",
+		"/C/Users/Benjamin/Documents/Projects/dowafo/public/modules/core/views/header.client.view.html",
+		"/C/Users/Benjamin/Documents/Projects/dowafo/public/modules/core/views/home.client.view.html",
+		"/C/Users/Benjamin/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
+		"/C/Users/Benjamin/AppData/Roaming/Sublime Text 3/Packages/Default/Default (Windows).sublime-keymap",
+		"/C/Users/Benjamin/Documents/Projects/ladio/index.html",
+		"/C/Users/Benjamin/Documents/Projects/dowafo/public/modules/core/css/animate.min.css.bak",
+		"/C/Users/Benjamin/Documents/Projects/dowafo/public/modules/core/css/core.css.bak",
+		"/C/Users/Benjamin/Documents/Projects/dowafo/public/modules/places/controllers/places.client.controller.js",
+		"/C/Users/Benjamin/Documents/Projects/dowafo/public/modules/core/controllers/home.client.controller.js",
+		"/C/Users/Benjamin/Documents/Projects/dowafo/config/env/all.js",
+		"/C/Users/Benjamin/Documents/Projects/dowafo/app/models/place.server.model.js",
+		"/C/Users/Benjamin/Documents/Projects/dowafo/public/modules/places/views/view-place.client.view.html",
+		"/C/Users/Benjamin/Documents/Projects/dowafo/public/modules/places/views/list-places.client.view.html",
+		"/C/Users/Benjamin/Documents/Projects/dowafo/public/modules/places/views/shareWith.client.view.html",
+		"/C/Users/Benjamin/Documents/Projects/dowafo/public/modules/products/views/create-product.client.view.html",
+		"/C/Users/Benjamin/Documents/Projects/dowafo/app/controllers/products.server.controller.js",
+		"/C/Users/Benjamin/Documents/Projects/dowafo/public/modules/places/views/add2place.client.view.html",
+		"/C/Users/Benjamin/Documents/Projects/dowafo/public/config.js",
+		"/C/Users/Benjamin/Documents/Projects/dowafo/bower.json",
+		"/C/Users/Benjamin/Documents/Projects/dowafo/app/controllers/places.server.controller.js",
+		"/C/Users/Benjamin/Documents/Projects/dowafo/app/controllers/users/users.profile.server.controller.js",
+		"/C/Users/Benjamin/Documents/Projects/dowafo/.jshintrc",
+		"/C/Users/Benjamin/Documents/Projects/dowafo/config/env/development.js",
+		"/C/Users/Benjamin/Documents/Projects/dowafo/config/env/production.js",
+		"/C/Users/Benjamin/Documents/Projects/dowafo/config/env/secure.js",
+		"/C/Users/Benjamin/Documents/Projects/dowafo/config/env/test.js",
+		"/C/Users/Benjamin/Downloads/history-1443385472196.csv",
+		"/C/Users/Benjamin/Documents/Projects/dowafo/public/modules/products/views/view-product.client.view.html",
+		"/C/Users/Benjamin/Documents/Projects/dowafo/Dockerfile",
+		"/C/Users/Benjamin/Documents/Projects/dowafo/public/modules/places/services/places.client.service.js",
+		"/C/Users/Benjamin/Documents/Projects/dowafo/public/modules/products/views/add2place.client.view.html",
+		"/C/Users/Benjamin/Documents/Projects/dowafo/public/modules/products/controllers/products.client.controller.js",
+		"/C/Users/Benjamin/Documents/Projects/dowafo/app/routes/users.server.routes.js",
+		"/C/Users/Benjamin/Documents/Projects/dowafo/app/models/product.server.model.js",
+		"/C/Users/Benjamin/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings"
+	],
+	"find":
+	{
+		"height": 29.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"obj",
+			"bootstrap",
+			"span",
+			"amountMax",
+			"smal",
+			"h3",
+			"\"",
+			" ng-show=\"over\"",
+			"ng-model=\"",
+			"mhd",
+			"\\[\\d{1,3}\\]",
+			"[\\d{1,3}]",
+			"	",
+			"\"",
+			":",
+			"\"",
+			" \"",
+			"'"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 394,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								367,
+								367
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "index.js",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 911,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								547,
+								547
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 29.0
+	},
+	"input":
+	{
+		"height": 30.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git-commit":
+	{
+		"height": 134.0
+	},
+	"output.git-push":
+	{
+		"height": 134.0
+	},
+	"pinned_build_system": "",
+	"project": "pm2.sublime-project",
+	"replace":
+	{
+		"height": 54.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"placeser",
+				"app\\controllers\\places.server.controller.js"
+			],
+			[
+				"placecontroler",
+				"public\\modules\\places\\controllers\\places.client.controller.js"
+			],
+			[
+				"placelientview",
+				"public\\modules\\places\\views\\view-place.client.view.html"
+			],
+			[
+				"all",
+				"config\\env\\all.js"
+			],
+			[
+				"placenclientco",
+				"public\\modules\\places\\controllers\\places.client.controller.js"
+			],
+			[
+				"homeview",
+				"public\\modules\\core\\views\\home.client.view.html"
+			],
+			[
+				"homecontrol",
+				"public\\modules\\core\\controllers\\home.client.controller.js"
+			],
+			[
+				"configall",
+				"config\\env\\all.js"
+			],
+			[
+				"prodser",
+				"app\\controllers\\products.server.controller.js"
+			],
+			[
+				"viewplace",
+				"public\\modules\\places\\views\\view-place.client.view.html"
+			],
+			[
+				"pordclientco",
+				"public\\modules\\products\\controllers\\products.client.controller.js"
+			],
+			[
+				"placecontr",
+				"public\\modules\\places\\controllers\\places.client.controller.js"
+			],
+			[
+				"placeontrol",
+				"public\\modules\\places\\controllers\\places.client.controller.js"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 312.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

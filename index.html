@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Electron boilerplate</title>
+		<link rel="stylesheet" href="./bower_components/photon/dist/css/photon.min.css">
+	</head>
+	<body ng-app="mouse">
+		<div class="window">
+			<header class="toolbar toolbar-header" ng-controller="TopBarCtrl">
+				<h1 class="title">Header with actions</h1>
+				<div class="toolbar-actions">
+					<div class="btn-group">
+						<button class="btn btn-default active">
+						<span class="icon icon-home"></span>
+						</button>
+						<button class="btn btn-default">
+						<span class="icon icon-folder" ng-click="dirChange()"></span>
+						</button>
+					</div>
+					<button class="btn btn-default btn-dropdown pull-right">
+					<span class="icon icon-megaphone"></span>
+					</button>
+				</div>
+			</header>
+			<div class="window-content">
+				<div class="pane-group">
+					<div class="pane pane-sm">
+						<nav class="nav-group" ng-controller="NavCtrl">
+							<h5 class="nav-group-title">Projects</h5>
+							<span class="nav-group-item" ng-repeat="(key1, value) in projects">
+								<span class="icon icon-cloud active"></span>
+								<a href="" ng-click="choose(value)">{{value.name}}</a>
+							</span>
+						</nav>
+					</div>
+					<div class="pane" ng-controller="ContentCtrl">
+						<ul class="list-group">
+							<li class="list-group-header" >
+							<h1 ng-bind="project.node.name"></h1>
+							<p>Author: <strong ng-bind="project.node.author.name"></strong></p>
+							</li>
+							<li class="list-group-header">
+								<input class="form-control" type="text" placeholder="Search for something" ng-model="search">
+							</li>
+							<li class="list-group-header">
+								<h3>Node Stuff</h3>
+							</li>
+							<li class="list-group-item">
+								<div class="media-body">
+									<strong>Node devDependencies</strong>
+									<ul>
+										<li ng-repeat="(key, value2) in project.node.devDependencies">{{key}}</li>
+									</ul>
+									<strong>Node Dependencies</strong>
+									<ul>
+										<li ng-repeat="(key, value2) in project.node.dependencies">{{key}}</li>
+									</ul>
+									<strong>Bower Dependencies</strong>
+									<ul>
+										<li ng-repeat="(key, value2) in project.bower.dependencies">{{key}}</li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="./bower_components/angular/angular.js"></script>
+		<script type="text/javascript" src="./public/js/main.js"></script>
+	</body>
+</html>

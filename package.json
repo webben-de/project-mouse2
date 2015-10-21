@@ -1,0 +1,45 @@
+{
+  "name": "project-mouse2",
+  "productName": "ProjectMouse2",
+  "version": "0.0.0",
+  "description": "My excellent app",
+  "license": "MIT",
+  "repository": "geisslercom/project-mouse2",
+  "author": {
+    "name": "Benjamin Geissler",
+    "email": "b.geissler89@googlemail.com",
+    "url": "geissler-com.de"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "electronVersion": "0.34.0",
+  "scripts": {
+    "test": "xo",
+    "start": "electron .",
+    "build": "electron-packager . $npm_package_productName --out=dist --ignore='^/dist$' --prune --asar --all --version=$npm_package_electronVersion"
+  },
+  "files": [
+    "index.js",
+    "index.html",
+    "index.css"
+  ],
+  "keywords": [
+    "electron-app"
+  ],
+  "dependencies": {
+    "electron-debug": "^0.2.1"
+  },
+  "devDependencies": {
+    "electron-packager": "^5.0.0",
+    "electron-prebuilt": "^0.34.0",
+    "xo": "^0.9.0"
+  },
+  "xo": {
+    "esnext": true,
+    "envs": [
+      "node",
+      "browser"
+    ]
+  }
+}

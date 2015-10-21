@@ -1,0 +1,16 @@
+[
+	{
+			"name": "Dowafo",
+			"version": "1.0.1",
+			"lang": "js",
+			"git": {
+				"commit" : "143243eb",
+				"date" : "now",
+				"owner" : "Benjamin Geißler"
+			},
+			"dependencies" : {
+				"npm" : ["grunt"],
+				"bower" : ["angular"]
+			}
+		}
+]

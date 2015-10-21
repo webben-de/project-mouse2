@@ -1,0 +1,29 @@
+{
+  "name": "project-mouse2",
+  "description": "ProjectTool",
+  "main": "index.js",
+  "authors": [
+    "Benjamin Geissler"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "electron-app"
+  ],
+  "moduleType": [
+    "es6",
+    "globals",
+    "node"
+  ],
+  "homepage": "geissler-com.de",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.7",
+    "photon": "~0.1.2-alpha"
+  }
+}
