@@ -5,7 +5,7 @@
 		<title>Electron boilerplate</title>
 		<link rel="stylesheet" href="./bower_components/photon/dist/css/photon.min.css">
 	</head>
-	<body ng-app="mouse">
+	<body ng-app="mouse"<!--   style="-webkit-app-region: drag -->">
 		<div class="window">
 			<header class="toolbar toolbar-header" ng-controller="TopBarCtrl">
 				<h1 class="title">Header with actions</h1>
@@ -30,7 +30,9 @@
 							<h5 class="nav-group-title">Projects</h5>
 							<span class="nav-group-item" ng-repeat="(key1, value) in projects">
 								<span class="icon icon-folder"></span>
-								<span ng-click="choose(value)">{{value.name}}</span>
+								<span ng-right ng-click="choose(value)">{{value.name}}</span>
+								<span class="icon icon-github" ng-show="value.git.status.ahead" title="Ahead with {{value.git.status.ahead}} Commits"></span>
+								<span class="icon icon-github-circle" ng-show="value.git.status.dirty"></span>
 							</span>
 						</nav>
 					</div>
@@ -47,15 +49,23 @@
 								<div class="media-body">
 									<strong>Node devDependencies</strong>
 									<ul>
-										<li ng-repeat="(key, value2) in project.node.devDependencies">{{key}}</li>
+										<li ng-repeat="(key, value2) in project.node.devDependencies ">{{key}}</li>
 									</ul>
 									<strong>Node Dependencies</strong>
 									<ul>
-										<li ng-repeat="(key, value2) in project.node.dependencies">{{key}}</li>
+										<li ng-repeat="(key, value2) in project.node.dependencies ">{{key}}</li>
 									</ul>
 									<strong>Bower Dependencies</strong>
 									<ul>
-										<li ng-repeat="(key, value2) in project.bower.dependencies">{{key}}</li>
+										<li ng-repeat="(key, value2) in project.bower.dependencies ">{{key}}</li>
+									</ul>
+									<strong>Git Log</strong>
+									<ul>
+										<li ng-repeat="(key, value) in project.git.commits"><em>{{value.authorName}}: </em>{{value.subject}}</li>
+									</ul>
+									<strong>Files</strong>
+									<ul>
+										<li ng-repeat="(key, value) in project.files" ng-if="!angular.isObject(value)"><span class="icon icon-newspaper"></span>{{value}}</li>
 									</ul>
 								</div>
 							</li>

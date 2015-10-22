@@ -28,7 +28,11 @@
     "electron-app"
   ],
   "dependencies": {
-    "electron-debug": "^0.2.1"
+    "electron-debug": "^0.2.1",
+    "git-get-status": "^1.0.2",
+    "git-log": "0.0.1",
+    "git-state": "^2.5.0",
+    "gitlog": "^2.1.2"
   },
   "devDependencies": {
     "electron-packager": "^5.0.0",

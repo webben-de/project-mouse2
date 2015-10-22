@@ -21,8 +21,10 @@ function onClosed() {
 
 function createMainWindow() {
 	const win = new BrowserWindow({
-		width: 600,
-		height: 400
+		"width": 600,
+		"height": 400,
+		"transparent" : true,
+		// frame: false
 	});
 	win.loadUrl(`file://${__dirname}/index.html`);
 	win.on('closed', onClosed);
@@ -49,7 +51,7 @@ app.on('ready', () => {
 });
 
 ipc.on('dirChange', ()=>{
-	dialog.showOpenDialog({ properties: [ 'openDirectory']},(path)=>{
-		webContents.send('dirChange', path);
+	dialog.showOpenDialog({ properties: [ 'openDirectory' , 'multiSelections']},(paths)=>{
+		webContents.send('dirChange', paths);
 	});
 })
