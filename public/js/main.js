@@ -6,16 +6,25 @@ let config = require('./public/db/config.json');
 let gitlog = require('gitlog');
 let gitstate = require('git-state');
 
+let remote = require('remote');
+let Menu = remote.require('menu');
+let MenuItem = remote.require('menu-item');
+
+let lastItem = false;
+
+let navContext = new Menu();
 let app = angular.module('mouse',[]);
 let ipc = require('ipc');
 let fs = require('fs');
 let path = require('path');
 
+Notification.requestPermission();
+
+
 app.controller('NavCtrl', ['$scope','$rootScope', function($scope,$rootScope){
+
 	$scope.choose = (project) => $rootScope.$emit('projects', project);
-
 	$scope.projects = [];
-
 
 	let scanner = (_paths)=>{
 		if (!config.paths) {
@@ -66,14 +75,9 @@ app.controller('OptionsCtrl', ['$scope', ($scope)=>{
 	}
 }])
 
-let remote = require('remote');
-let Menu = remote.require('menu');
-let MenuItem = remote.require('menu-item');
-
-let lastItem = false;
-
-let navContext = new Menu();
-
+/**
+ * Context Menu
+ */
 navContext.append(new MenuItem({ label: 'Open in Browser', click: (e)=> { console.log(e,'item 1 clicked'); } }));
 navContext.append(new MenuItem({ label: 'Open in Terminal', click: ()=> { console.log('item 1 clicked'); } }));
 
@@ -84,6 +88,7 @@ window.addEventListener('contextmenu', function (e) {
 }, false);
 
 
+// var notify = new Notification('title', { body: 'body', icon: 'assets/icon.png' });
 
 class Project{
 	constructor(p, name){
@@ -92,7 +97,7 @@ class Project{
 		this.name = name
 		this.files = []
 		this.indicat()
-		// console.log(this)
+		console.log(this)
 	}
 	indicat(){
 		fs.readdir(this.path, (err,content)=> {
@@ -118,6 +123,10 @@ class Project{
 		fs.stat(path.join(this.path, 'bower.json'),(err,data)=>{
 			if (err) return false;
 			this.bower = require(path.join(this.path, 'bower.json'));
+			fs.watch(path.join(this.path, 'bower.json'), ()=>{
+				this.bower = require(path.join(this.path, 'bower.json'));
+				new Notification(`PM2 --${this.name} -- Bower`, {body: 'Bower added new Dependencies' , icon : 'icon.png'})
+			})
 		});
 	}
 	cppChecker(content){
@@ -133,15 +142,18 @@ class Project{
 			gitlog({repo: path.join(this.path, '.git')},(error,commits)=>{
 				this.git.commits = commits;
 			});
-			gitstate.check(path.join(this.path),(err,result)=>{
+			gitstate.check(path.join(this.path), (err,result)=>{
 				this.git.status = result
-			})
+			});
+
+			// fs.watch(path.join(this.path, '.git'), (ev,file)=>{
+			// 	gitstate.check(path.join(this.path),(err,result)=>{
+			// 		if (this.git.status !== result) {
+			// 			new Notification(`PM2 --${this.name} -- GIT`, {body: 'Git status changed' , icon : 'icon.png'})
+			// 		};
+			// 	})
+			// });
 		})
 	}
 }
 
-
-
-/**
- * ELECTRON
- */

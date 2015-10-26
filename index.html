@@ -32,7 +32,6 @@
 								<span class="icon icon-folder"></span>
 								<span ng-right ng-click="choose(value)">{{value.name}}</span>
 								<span class="icon icon-github" ng-show="value.git.status.ahead" title="Ahead with {{value.git.status.ahead}} Commits"></span>
-								<span class="icon icon-github-circle" ng-show="value.git.status.dirty"></span>
 							</span>
 						</nav>
 					</div>
@@ -41,6 +40,19 @@
 							<li class="list-group-header" >
 							<h1 ng-bind="project.node.name"></h1>
 							<p>Author: <strong ng-bind="project.node.author.name"></strong></p>
+							<ul ng-if="project.git">
+								<p>GIT:</p>
+								<li ng-if="project.git.status.ahead > 0">
+									<p>Ahead with {{project.git.status.ahead}} Commits</p>
+									<button class="btn btn-positive" ng-click="pushCommits()">Push them</button>
+								</li>
+								<li ng-if="project.git.status.dirty > 0">
+									<p>Changes on {{project.git.status.dirty}} Files</p>
+									<button class="btn btn-positive" ng-click="createCommit()">Commit them</button>
+								</li>
+								<li ng-if="project.git.status.untracked > 0">{{project.git.status.untracked}} Untracked Files</li>
+
+							</ul>
 							</li>
 							<li class="list-group-header">
 								<h3>Node Stuff</h3>
