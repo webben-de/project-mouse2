@@ -45,7 +45,25 @@ app.controller('ContentCtrl', ['$scope','$rootScope',($scope,$rootScope)=>{
 }]);
 
 app.controller('TopBarCtrl', ['$scope', ($scope)=>{
-	$scope.dirChange = ()=> ipc.send('dirChange');
+	$scope.dirChange = () => ipc.send('dirChange');
+	$scope.openOptions = () => ipc.send('openOptions');
+}]);
+
+app.controller('OptionsCtrl', ['$scope', ($scope)=>{
+	$scope.config = config;
+	$scope.addPath = ()=>{
+		ipc.send('dirChange')
+		let l = ipc.on('dirChange' , (dirs)=>{
+			config.paths = config.paths.concat(dirs);
+			fs.writeFile('./public/db/config.json', JSON.stringify(config,null,4));
+			l = null
+			$scope.$apply()
+		})
+	}
+	$scope.removePath = (index)=>{
+		config.paths.splice(index,1)
+		fs.writeFile('./public/db/config.json', JSON.stringify(config,null,4));
+	}
 }])
 
 let remote = require('remote');

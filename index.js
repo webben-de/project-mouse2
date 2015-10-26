@@ -11,23 +11,37 @@ require('electron-debug')();
 
 // prevent window being garbage collected
 let mainWindow;
+let optWindow;
 let webContents;
+let optContens;
 
-function onClosed() {
-	// dereference the window
-	// for multiple windows store them in an array
-	mainWindow = null;
+function onClosed(win) {
+	win = null
+}
+function createOptionWindow (argument) {
+	let optionsW = new BrowserWindow({
+		"width": 600,
+		"height": 400,
+		frame: false
+	});
+	optionsW.loadUrl(`file://${__dirname}/option.html`);
+	optionsW.on('closed', ()=>{
+		onClosed(optWindow)
+	});
+	optContens = optionsW.webContents;
+	return optionsW;
 }
 
 function createMainWindow() {
-	const win = new BrowserWindow({
+	let win = new BrowserWindow({
 		"width": 600,
-		"height": 400,
 		"transparent" : true,
-		// frame: false
+		frame: false
 	});
 	win.loadUrl(`file://${__dirname}/index.html`);
-	win.on('closed', onClosed);
+	win.on('closed', ()=>{
+		onClosed(mainWindow)
+	});
 
 	webContents = win.webContents;
 
@@ -53,5 +67,16 @@ app.on('ready', () => {
 ipc.on('dirChange', ()=>{
 	dialog.showOpenDialog({ properties: [ 'openDirectory' , 'multiSelections']},(paths)=>{
 		webContents.send('dirChange', paths);
+		if (optWindow) {
+			optContens.send('dirChange', paths);
+		}
 	});
 })
+
+ipc.on('openOptions', ()=>{
+	if (!optWindow) {
+		optWindow = createOptionWindow();
+	}
+})
+
+// );
