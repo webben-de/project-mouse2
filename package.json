@@ -1,8 +1,8 @@
 {
   "name": "project-mouse2",
   "productName": "ProjectMouse2",
-  "version": "0.0.0",
-  "description": "My excellent app",
+  "version": "0.0.1",
+  "description": "Projectfolder Managment",
   "license": "MIT",
   "repository": "geisslercom/project-mouse2",
   "author": {

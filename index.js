@@ -1,4 +1,5 @@
 'use strict';
+
 const app = require('app');
 const BrowserWindow = require('browser-window');
 const dialog = require('dialog');
@@ -15,32 +16,33 @@ let optWindow;
 let webContents;
 let optContens;
 
-function onClosed(win) {
-	win = null
+function onClosed() {
+	// win = null;
 }
-function createOptionWindow (argument) {
-	let optionsW = new BrowserWindow({
-		"width": 600,
-		"height": 400,
-		frame:  true
+
+function createOptionWindow() {
+	const optionsW = new BrowserWindow({
+		width: 600,
+		height: 400,
+		frame: true
 	});
 	optionsW.loadUrl(`file://${__dirname}/option.html`);
-	optionsW.on('closed', ()=>{
-		onClosed(optWindow)
+	optionsW.on('closed', () => {
+		onClosed(optWindow);
 	});
 	optContens = optionsW.webContents;
 	return optionsW;
 }
 
 function createMainWindow() {
-	let win = new BrowserWindow({
-		"width": 600,
-		"transparent" : true,
+	const win = new BrowserWindow({
+		width: 600,
+		transparent: true,
 		frame: false
 	});
 	win.loadUrl(`file://${__dirname}/index.html`);
-	win.on('closed', ()=>{
-		onClosed(mainWindow)
+	win.on('closed', () => {
+		onClosed(mainWindow);
 	});
 
 	webContents = win.webContents;
@@ -64,19 +66,19 @@ app.on('ready', () => {
 	mainWindow = createMainWindow();
 });
 
-ipc.on('dirChange', ()=>{
-	dialog.showOpenDialog({ properties: [ 'openDirectory' , 'multiSelections']},(paths)=>{
+ipc.on('dirChange', () => {
+	dialog.showOpenDialog({properties: ['openDirectory', 'multiSelections']}, paths => {
 		webContents.send('dirChange', paths);
 		if (optWindow) {
 			optContens.send('dirChange', paths);
 		}
 	});
-})
+});
 
-ipc.on('openOptions', ()=>{
+ipc.on('openOptions', () => {
 	if (!optWindow) {
 		optWindow = createOptionWindow();
 	}
-})
+});
 
 // );
