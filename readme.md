@@ -1,6 +1,9 @@
 # project-mouse2
 ![npm](https://badge.fury.io/js/project-mouse2.svg)
 ![dep](https://david-dm.org/geisslercom/project-mouse2.svg)
+[![Build Status](https://travis-ci.org/geisslercom/project-mouse2.svg?branch=master)](https://travis-ci.org/geisslercom/project-mouse2)
+
+
 A desktop tool to overview your project folders.
 
 ## Default View
