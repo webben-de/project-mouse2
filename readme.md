@@ -3,10 +3,10 @@
 A desktop tool to overview your project folders.
 
 ## Default View
-![Pic1](http://imgur.com/hNUtMOD)
+![Pic1](http://i.imgur.com/hNUtMOD.png)
 
 ## with Git Notification-Badge (Dirty-Projectfolder)
-![Pic1](http://imgur.com/QgDWEI7)
+![Pic1](http://i.imgur.com/QgDWEI7.png)
 
 ## Dev
 
