@@ -1,21 +1,5 @@
 {
     "paths": [
-        "/home/benjamin/projects/angular",
-        "/home/benjamin/projects/arudino",
-        "/home/benjamin/projects/chrome",
-        "/home/benjamin/projects/codropds",
-        "/home/benjamin/projects/cpp",
-        "/home/benjamin/projects/customer",
-        "/home/benjamin/projects/firebase",
-        "/home/benjamin/projects/help",
-        "/home/benjamin/projects/lamp",
-        "/home/benjamin/projects/nodeapps",
-        "/home/benjamin/projects/noob2hero",
-        "/home/benjamin/projects/plain",
-        "/home/benjamin/projects/private",
-        "/home/benjamin/projects/python",
-        "/home/benjamin/projects/susi",
-        "/home/benjamin/projects/unsorted_githubrepos",
-        "/home/benjamin/scripts"
+        "/home/benjamin/projects/susi"
     ]
 }

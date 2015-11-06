@@ -22,7 +22,7 @@ function createOptionWindow (argument) {
 	let optionsW = new BrowserWindow({
 		"width": 600,
 		"height": 400,
-		frame: false
+		frame:  true
 	});
 	optionsW.loadUrl(`file://${__dirname}/option.html`);
 	optionsW.on('closed', ()=>{

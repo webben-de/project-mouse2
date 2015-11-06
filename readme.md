@@ -1,18 +1,23 @@
 # project-mouse2
 
-> My excellent app
+A desktop tool to overview your project folders.
 
+## Default View
+![Pic1](http://imgur.com/hNUtMOD)
+
+## with Git Notification-Badge (Dirty-Projectfolder)
+![Pic1](http://imgur.com/QgDWEI7)
 
 ## Dev
 
 ```
-$ npm install
+$ npm install && bower install
 ```
 
 ### Run
 
 ```
-$ npm start
+$ electron .
 ```
 
 ### Build
