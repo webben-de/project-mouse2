@@ -1,5 +1,6 @@
 # project-mouse2
-
+![npm](https://badge.fury.io/js/project-mouse2.svg)
+![dep](https://david-dm.org/geisslercom/project-mouse2.svg)
 A desktop tool to overview your project folders.
 
 ## Default View
